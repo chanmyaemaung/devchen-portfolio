@@ -1,6 +1,6 @@
 {
   "name": "devchen",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -10,8 +10,8 @@
     "serve:ssr:devchen": "node dist/devchen/server/server.mjs"
   },
   "private": true,
+  "author": "chanmyaemaung",
   "dependencies": {
-    "@angular/animations": "^18.2.0",
     "@angular/common": "^18.2.0",
     "@angular/compiler": "^18.2.0",
     "@angular/core": "^18.2.0",

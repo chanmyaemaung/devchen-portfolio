@@ -1,0 +1,39 @@
+<nav class="devchen__main-nav" [attr.aria-label]="'Main Navigation'">
+  <div class="devchen__main-nav-wrapper">
+    <div class="devchen__nav-logo-wrapper">
+      <a routerLink="/" [attr.aria-label]="'Go to homepage'" class="devchen__nav-logo">
+        Chen <span>Lay</span>
+      </a>
+
+      <div class="devchen__nav-menu-icon" (click)="toggleMobileNav()" [attr.aria-label]="'Toggle Navigation Menu'"
+           role="button"
+           tabindex="0">
+        <!-- Menu Icon -->
+        <svg *ngIf="!isNavOpen" [attr.aria-hidden]="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+             viewBox="0 0 24 24"
+             stroke-width="1.5"
+             stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+        </svg>
+
+        <!-- Close Icon -->
+        <svg *ngIf="isNavOpen" [attr.aria-hidden]="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+             viewBox="0 0 24 24"
+             stroke-width="1.5"
+             stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+        </svg>
+      </div>
+    </div>
+
+    <ul role="list" class="devchen__navlist" [ngClass]="{'is-active-navlist': isNavOpen}">
+      @for (headerMenu of headerMenus; track $index; ) {
+        <li class="devchen__navlist-item">
+          <a routerLink="{{ headerMenu.link }}" routerLinkActive="active"
+             [routerLinkActiveOptions]="{exact: headerMenu.title === 'Home'}"
+             class="devchen__navlist-link" [attr.aria-label]="headerMenu.title">{{ headerMenu.title }}</a>
+        </li>
+      }
+    </ul>
+  </div>
+</nav>

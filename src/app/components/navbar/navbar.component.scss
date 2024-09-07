@@ -1,0 +1,134 @@
+.devchen__main-nav-wrapper, .devchen__navlist {
+  display: flex;
+  flex-direction: column;
+}
+
+.devchen__navlist {
+  list-style-type: none;
+  padding-inline: 0.5em;
+  align-items: center;
+  gap: 1em;
+  text-align: center;
+}
+
+.devchen__nav-logo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1em;
+  padding-inline: 0.5em;
+  border-bottom: 1px solid var(--lime);
+}
+
+.devchen__nav-menu-icon {
+  width: 2em;
+  height: 2em;
+}
+
+.devchen__nav-logo {
+  font-size: 2rem;
+}
+
+.devchen__nav-logo, .devchen__navlist-link {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.devchen__nav-logo span {
+  color: var(--lime);
+}
+
+.devchen__navlist-item a {
+  transition: color 150ms ease-in-out, opacity 150ms ease-in-out;
+}
+
+.devchen__navlist-item:hover a {
+  color: var(--lime);
+  opacity: 0.85;
+}
+
+.devchen__navlist-link {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.devchen__navlist-link.active {
+  color: var(--lime);
+}
+
+.devchen__navlist-item.is-contact {
+  max-width: 150px;
+  width: 100%;
+}
+
+.devchen__navlist-item.is-contact .devchen__navlist-link {
+  background-color: var(--lime);
+  color: var(--black);
+  border-color: var(--lime);
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  margin-inline: auto;
+}
+
+
+.devchen__navlist-item.is-contact a {
+  border: 1px solid var(--white);
+  width: 120px;
+  height: 100%;
+  padding-block: 0.5em;
+  border-radius: 50px;
+}
+
+.devchen__navlist:not(.is-active-navlist) {
+  display: none;
+}
+
+.is-active-navlist {
+  display: flex;
+}
+
+@media screen and (min-width: 980px) {
+  .devchen__nav-menu-icon {
+    display: none;
+  }
+
+  .devchen__nav-logo-wrapper {
+    border-bottom: none;
+    padding: 0;
+  }
+
+  .devchen__navlist {
+    max-width: 500px;
+    width: 100%;
+    padding-inline: 0;
+    margin-block: 0;
+  }
+
+  .devchen__main-nav-wrapper, .devchen__navlist {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .devchen__main-nav-wrapper {
+    width: min(100% - 2em, var(--container-width, 1200px));
+    margin-inline: auto;
+    padding-block: 2em;
+  }
+
+  .devchen__navlist-item {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+  }
+
+  .devchen__navlist-item.is-contact .devchen__navlist-link {
+    width: 120px;
+  }
+
+  .devchen__navlist:not(.is-active-navlist) {
+    display: flex;
+  }
+}
