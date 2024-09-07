@@ -1,4 +1,5 @@
 export * from './navbar';
-export * from '../pages/home';
+export * from './hero';
+export * from './about-me';
 export * from './footer';
 
