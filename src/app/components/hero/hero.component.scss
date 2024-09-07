@@ -6,7 +6,7 @@
   display: grid;
   place-items: center;
   position: relative;
-  min-height: 30vh;
+  min-height: 20em;
   border-image: linear-gradient(233deg, rgba(0, 0, 0, 0) 9.96%, rgba(0, 0, 0, 0.6) 64.15%) fill 1;
 }
 
@@ -25,6 +25,7 @@
 
 .devchen__hero-title-group h1 + p {
   margin-block: 0;
+  font-size: 2rem;
 }
 
 .devchen__hero-social-links {
@@ -44,11 +45,11 @@
 }
 
 
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 1199px) {
   .devchen__hero {
     width: min(100% - 2em, var(--container-width, 1200px));
     margin-inline: auto;
-    min-height: 50vh;
+    min-height: 25em;
   }
 
   .devchen__hero-title-group h1 {
