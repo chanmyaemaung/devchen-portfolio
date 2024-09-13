@@ -1,0 +1,64 @@
+<section class="devchen__project" [attr.aria-labelledby]="'Project Showcase Section'">
+  <div class="container">
+    <div class="devchen__project-title">
+      <h2>Some of my projects</h2>
+    </div>
+
+    <ul role="list" class="devchen__project-list">
+      @for (projectItem of projectItems | slice: 0:3; track projectItem.id; ) {
+        <li role="listitem" class="devchen__project-list-item" [tabIndex]="0">
+          <div class="devchen__project-card">
+            <div class="devchen__project-card-body">
+              <div class="devchen__project-card-image">
+                <img ngSrc="{{ projectItem.image }}" alt="{{ projectItem.title }}" width="600" height="400"
+                     priority="priority" [tabIndex]="0"/>
+              </div>
+
+              <div class="devchen__project-card-info">
+                <h3 class="devchen__project-card-title">{{ projectItem.title }}</h3>
+
+                <div class="devchen__project-desc">
+                  {{ projectItem.description }}
+                </div>
+              </div>
+
+              <a role="link" [href]="projectItem.url" [target]="'_blank'" [rel]="'nofollow'"
+                 [attr.aria-label]="'Visit to the real world live site: ' + projectItem.url"
+                 class="devchen__project-card-link" [tabIndex]="0">
+                Learn More
+
+                <span>
+                  <svg viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg"><g
+                    id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier"> <g id="Interface / External_Link">
+                    <path id="Vector"
+                          d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11"
+                          stroke="#1a4651" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </li>
+      }
+    </ul>
+
+    <div class="devchen__project-seemore-btn-wrapper">
+      <a role="link" routerLink="/portfolio" [rel]="'follow'"
+         [attr.aria-label]="'See more all the project that involved.'"
+         class="devchen__project-seemore-btn" [tabIndex]="0">
+        See more
+        <span>
+            <svg viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg"><g
+              id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier"> <g id="Interface / External_Link">
+              <path id="Vector"
+                    d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11"
+                    stroke="#1a4651" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"></path> </g> </g></svg>
+          </span>
+      </a>
+    </div>
+  </div>
+</section>
