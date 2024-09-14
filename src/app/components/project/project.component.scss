@@ -6,98 +6,17 @@
   padding-inline-start: 0;
 }
 
-.devchen__project-list-item {
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.75);
-  transition: box-shadow 150ms ease-in-out;
-
-  &:hover {
-    box-shadow: 2px 2px 17px 0 rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 2px 2px 17px 0 rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 2px 2px 17px 0 rgba(0, 0, 0, 0.75);
-  }
-}
-
 .devchen__project-title {
   margin-block-end: 2em;
 }
 
-.devchen__project-title h2, .devchen__project-card-title {
+.devchen__project-title h2 {
   margin-block: 0;
 }
-
 
 .devchen__project-title h2 {
   text-align: center;
   font-size: 2rem;
-}
-
-.devchen__project-card {
-  color: var(--dark-green);
-}
-
-.devchen__project-card-image {
-  overflow: hidden;
-
-  &:hover img {
-    transform: scale(1.1);
-  }
-}
-
-.devchen__project-card-image img {
-  display: block;
-  max-width: 100%;
-  height: 100%;
-  object-fit: cover;
-  user-select: none;
-  -webkit-user-drag: none;
-  -moz-user-drag: none;
-  -ms-user-drag: none;
-  border-radius: 10px 10px 0 0;
-  transition: transform 150ms ease-in-out;
-}
-
-.devchen__project-card-info {
-  background-color: var(--white);
-  padding: 1em;
-  display: grid;
-  gap: 1em;
-}
-
-.devchen__project-card-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  text-align: center;
-  background-color: var(--lime);
-  color: var(--black);
-  padding-block: 0.5em;
-  text-transform: uppercase;
-  font-weight: bold;
-  transition: opacity 150ms ease-in-out, color 150ms ease-in-out;
-
-  span svg {
-    display: block;
-    width: 25px;
-    height: 25px;
-  }
-
-  &:hover {
-    opacity: 0.85;
-    color: var(--dark-green);
-  }
-}
-
-.devchen__project-card-title {
-  font-size: 1.6rem;
-}
-
-.devchen__project-desc {
-  font-size: 1rem;
 }
 
 .devchen__project-seemore-btn-wrapper {
@@ -157,14 +76,6 @@
 
   .devchen__project-list {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .devchen__project-card-link {
-    padding-block: 1em;
-  }
-
-  .devchen__project-desc {
-    font-size: 1.3rem;
   }
 
   .devchen__project-title h2 {

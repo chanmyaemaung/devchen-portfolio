@@ -2,6 +2,7 @@ import {Component, signal, Signal} from '@angular/core';
 import {ProjectCard} from '../../types';
 import {NgOptimizedImage, SlicePipe} from '@angular/common';
 import {RouterLink} from '@angular/router';
+import ProjectCardComponent from '@components/project-card/project-card.component';
 
 @Component({
   selector: 'app-project',
@@ -9,7 +10,8 @@ import {RouterLink} from '@angular/router';
   imports: [
     NgOptimizedImage,
     SlicePipe,
-    RouterLink
+    RouterLink,
+    ProjectCardComponent
   ],
   templateUrl: './project.component.html',
   styleUrl: './project.component.scss'
