@@ -5,7 +5,7 @@
     </div>
 
     <ul role="list" class="devchen__project-list">
-      @for (projectItem of projectItems | slice: 0:3; track projectItem.id; ) {
+      @for (projectItem of projectItems() | slice: 0:3; track projectItem.id; ) {
         <li role="listitem" class="devchen__project-list-item" [tabIndex]="0">
           <div class="devchen__project-card">
             <div class="devchen__project-card-body">
@@ -40,15 +40,20 @@
             </div>
           </div>
         </li>
+      } @empty {
+        <li class="devchen__empty-text">
+          <h2>Sorry! There are no any data found!</h2>
+        </li>
       }
     </ul>
 
-    <div class="devchen__project-seemore-btn-wrapper">
-      <a role="link" routerLink="/portfolio" [rel]="'follow'"
-         [attr.aria-label]="'See more all the project that involved.'"
-         class="devchen__project-seemore-btn" [tabIndex]="0">
-        See more
-        <span>
+    @if (projectItems().length) {
+      <div class="devchen__project-seemore-btn-wrapper">
+        <a role="link" routerLink="/portfolio" [rel]="'follow'"
+           [attr.aria-label]="'See more all the project that involved.'"
+           class="devchen__project-seemore-btn" [tabIndex]="0">
+          See more
+          <span>
             <svg viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg"><g
               id="SVGRepo_bgCarrier" stroke-width="0"></g>
               <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -58,7 +63,8 @@
                     stroke="#1a4651" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round"></path> </g> </g></svg>
           </span>
-      </a>
-    </div>
+        </a>
+      </div>
+    }
   </div>
 </section>

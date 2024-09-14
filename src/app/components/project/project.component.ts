@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, signal, Signal} from '@angular/core';
 import {ProjectCard} from '../../types';
 import {NgOptimizedImage, SlicePipe} from '@angular/common';
 import {RouterLink} from '@angular/router';
@@ -15,7 +15,7 @@ import {RouterLink} from '@angular/router';
   styleUrl: './project.component.scss'
 })
 export class ProjectComponent {
-  projectItems: ProjectCard[] = [
+  projectItems: Signal<ProjectCard[]> = signal([
     {
       id: 1,
       title: 'Project 1',
@@ -51,5 +51,5 @@ export class ProjectComponent {
       url: 'https://ombraz.com/',
       image: 'https://dummyimage.com/600x400/1a4651/fff.png&text=Dummy+project+card'
     },
-  ];
+  ]);
 }

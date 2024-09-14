@@ -138,6 +138,17 @@
   }
 }
 
+.devchen__empty-text {
+  grid-column: span 3;
+
+  h2 {
+    margin-block: 0;
+    text-align: center;
+    color: var(--bronze);
+    font-size: 1rem;
+  }
+}
+
 @media (min-width: 757px) {
   .devchen__project-title {
     padding-block: 2em;
@@ -158,6 +169,10 @@
 
   .devchen__project-title h2 {
     font-size: 3rem;
+  }
+
+  .devchen__empty-text h2 {
+    font-size: 1.6rem;
   }
 }
 
