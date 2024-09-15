@@ -1,0 +1,27 @@
+.devchen__blog {
+
+  &-header {
+
+    h2 {
+      font-size: 2rem;
+      margin-block: 0;
+
+      span {
+        color: var(--lime);
+      }
+    }
+  }
+}
+
+@media (min-width: 599px) {
+  .devchen__blog-header h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 980px) {
+  .devchen__blog-header h2 {
+    border-bottom: 1px solid var(--lime);
+    padding-block-end: 0.5em;
+  }
+}

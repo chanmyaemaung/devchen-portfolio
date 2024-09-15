@@ -41,6 +41,9 @@
       ],
       "@constants/*": [
         "./src/app/constants/*"
+      ],
+      "@data/*": [
+        "./src/app/data/*"
       ]
     }
   },

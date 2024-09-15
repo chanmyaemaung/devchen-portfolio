@@ -27,8 +27,8 @@
     </div>
 
     <ul role="list" class="devchen__navlist" [ngClass]="{'is-active-navlist': isNavOpen}">
-      @for (headerMenu of headerMenus; track $index; ) {
-        <li class="devchen__navlist-item">
+      @for (headerMenu of headerMenus(); track headerMenu; let index = $index) {
+        <li class="devchen__navlist-item" [ngClass]="{'is-contact': index === headerMenus().length - 1}">
           <a routerLink="{{ headerMenu.link }}" routerLinkActive="active"
              [routerLinkActiveOptions]="{exact: headerMenu.title === 'Home'}"
              class="devchen__navlist-link" [attr.aria-label]="headerMenu.title">{{ headerMenu.title }}</a>

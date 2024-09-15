@@ -1,5 +1,5 @@
 import {Component, input} from '@angular/core';
-import {ProjectCard} from '../../types';
+import {ProjectCardInterface} from '../../interfaces';
 import {NgOptimizedImage} from '@angular/common';
 
 @Component({
@@ -12,5 +12,5 @@ import {NgOptimizedImage} from '@angular/common';
   styleUrl: './showcase-card.component.scss'
 })
 export class ShowcaseCardComponent {
-  projectItem = input.required<ProjectCard>();
+  projectItem = input.required<ProjectCardInterface>();
 }

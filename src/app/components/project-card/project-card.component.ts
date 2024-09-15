@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {NgOptimizedImage} from '@angular/common';
-import {ProjectCard} from '../../types';
+import {ProjectCardInterface} from '../../interfaces';
 
 @Component({
   selector: 'app-project-card',
@@ -12,5 +12,5 @@ import {ProjectCard} from '../../types';
   styleUrls: ['project-card.component.scss']
 })
 export default class ProjectCardComponent {
-  @Input({required: true}) projectCardItem!: ProjectCard;
+  @Input({required: true}) projectCardItem!: ProjectCardInterface;
 }

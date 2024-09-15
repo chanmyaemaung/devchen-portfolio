@@ -1,4 +1,4 @@
-import {socialLink} from '../types/social-link.interface';
+import {socialLink} from '../interfaces/social-link.interface';
 
 export const SOCIAL_LINKS: socialLink[] = [
   {

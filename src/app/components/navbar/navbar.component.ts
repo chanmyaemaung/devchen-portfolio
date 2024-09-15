@@ -1,8 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, inject, OnInit, signal, Signal} from '@angular/core';
 import {NavigationEnd, Router, RouterLink, RouterLinkActive} from '@angular/router';
 import {NgClass, NgIf} from '@angular/common';
 import {MENU_ITEMS} from '@constants/menu-links.constant';
 import {filter} from 'rxjs';
+import {MenuLink} from '@interfaces/menu-link.interface';
 
 @Component({
   selector: 'app-navbar',
@@ -17,11 +18,10 @@ import {filter} from 'rxjs';
   styleUrl: './navbar.component.scss'
 })
 export default class NavbarComponent implements OnInit {
-  headerMenus = MENU_ITEMS;
+  headerMenus: Signal<MenuLink[]> = signal(MENU_ITEMS);
   isNavOpen = false;
 
-  constructor(private router: Router) {
-  }
+  router: Router = inject(Router);
 
   ngOnInit() {
     // Close the menu on route change

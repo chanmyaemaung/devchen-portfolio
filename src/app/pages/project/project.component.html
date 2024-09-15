@@ -1,0 +1,17 @@
+<section class="devchen__project" [attr.aria-labelledby]="'Project Showcase Section'">
+  <div class="container">
+    <div class="devchen__project-header">
+      <h2>All <span>Projects</span></h2>
+    </div>
+
+    <ul role="list" class="devchen__project-list">
+      @for (item of allProjectItems(); track item) {
+        <app-project-card [projectCardItem]="item"/>
+      } @empty {
+        <li class="devchen__empty-text">
+          <h2>Sorry! There are no any data found!</h2>
+        </li>
+      }
+    </ul>
+  </div>
+</section>

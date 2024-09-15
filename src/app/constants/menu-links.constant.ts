@@ -1,4 +1,4 @@
-import {MenuLink} from '../types/menu-link.interface';
+import {MenuLink} from '@interfaces/menu-link.interface';
 
 export const MENU_ITEMS: MenuLink[] = [
   {
@@ -6,12 +6,8 @@ export const MENU_ITEMS: MenuLink[] = [
     link: '/'
   },
   {
-    title: 'Portfolio',
-    link: '/portfolio'
-  },
-  {
-    title: 'Services',
-    link: '/service'
+    title: 'Projects',
+    link: '/project'
   },
   {
     title: 'Blog',
