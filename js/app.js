@@ -28,41 +28,88 @@ class App {
 
 class ThemeManager {
   constructor() {
-    this.darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    // Theme toggle buttons
     this.themeToggle = document.getElementById("themeToggle");
+    this.mobileThemeToggle = document.getElementById("mobileThemeToggle");
+
+    // Theme icons
     this.darkIcon = document.getElementById("darkIcon");
     this.lightIcon = document.getElementById("lightIcon");
+    this.mobileDarkIcon = document.getElementById("mobileDarkIcon");
+    this.mobileLightIcon = document.getElementById("mobileLightIcon");
+
     this.init();
   }
 
   init() {
-    this.updateTheme(this.darkModeMediaQuery);
-    this.setupEventListeners();
-  }
+    // Check system preference
+    const systemPrefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
 
-  setupEventListeners() {
-    this.darkModeMediaQuery.addEventListener("change", (e) =>
-      this.updateTheme(e)
-    );
-    this.themeToggle.addEventListener("click", () => this.toggleTheme());
-  }
-
-  updateTheme(e) {
-    if (e.matches) {
+    // Set initial theme based on localStorage or system preference
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) && systemPrefersDark)
+    ) {
       document.documentElement.classList.add("dark");
-      this.lightIcon.classList.remove("hidden");
-      this.darkIcon.classList.add("hidden");
+      this.showLightIcon();
     } else {
       document.documentElement.classList.remove("dark");
-      this.lightIcon.classList.add("hidden");
-      this.darkIcon.classList.remove("hidden");
+      this.showDarkIcon();
     }
+
+    // Add click handlers
+    this.themeToggle?.addEventListener("click", () => this.toggleTheme());
+    this.mobileThemeToggle?.addEventListener("click", () => this.toggleTheme());
+
+    // Listen for system theme changes
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (e) => {
+        // Always follow system preference
+        if (e.matches) {
+          document.documentElement.classList.add("dark");
+          this.showLightIcon();
+        } else {
+          document.documentElement.classList.remove("dark");
+          this.showDarkIcon();
+        }
+        // Remove theme from localStorage to follow system
+        localStorage.removeItem("theme");
+      });
   }
 
   toggleTheme() {
-    document.documentElement.classList.toggle("dark");
-    this.darkIcon.classList.toggle("hidden");
-    this.lightIcon.classList.toggle("hidden");
+    if (document.documentElement.classList.contains("dark")) {
+      document.documentElement.classList.remove("dark");
+      localStorage.theme = "light";
+      this.showDarkIcon();
+    } else {
+      document.documentElement.classList.add("dark");
+      localStorage.theme = "dark";
+      this.showLightIcon();
+    }
+  }
+
+  showDarkIcon() {
+    // Desktop icons
+    this.darkIcon?.classList.remove("hidden");
+    this.lightIcon?.classList.add("hidden");
+
+    // Mobile icons
+    this.mobileDarkIcon?.classList.remove("hidden");
+    this.mobileLightIcon?.classList.add("hidden");
+  }
+
+  showLightIcon() {
+    // Desktop icons
+    this.darkIcon?.classList.add("hidden");
+    this.lightIcon?.classList.remove("hidden");
+
+    // Mobile icons
+    this.mobileDarkIcon?.classList.add("hidden");
+    this.mobileLightIcon?.classList.remove("hidden");
   }
 }
 
