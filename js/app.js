@@ -1,6 +1,7 @@
 class App {
   constructor() {
     this.initializeComponents();
+    this.updateCopyrightYear();
   }
 
   initializeComponents() {
@@ -10,6 +11,13 @@ class App {
     this.languageModal = new LanguageModal();
     this.projectsManager = new ProjectsManager();
     this.scrollReveal = new ScrollReveal();
+  }
+
+  updateCopyrightYear() {
+    const yearElement = document.getElementById("currentYear");
+    if (yearElement) {
+      yearElement.textContent = new Date().getFullYear();
+    }
   }
 }
 
