@@ -144,7 +144,9 @@
           </div>
 
           <!-- Text Content - Second on mobile, First on desktop -->
-          <div class="order-2 lg:order-1 text-center lg:text-left">
+          <div
+            class="order-2 lg:order-1 text-center lg:text-left max-w-full lg:max-w-xl"
+          >
             <p
               class="text-primary-600 dark:text-primary-400 text-lg font-medium flex items-center gap-2 justify-center lg:justify-start"
             >
@@ -153,27 +155,28 @@
             </p>
 
             <h1
-              class="text-4xl sm:text-5xl font-semibold text-gray-900 dark:text-white tracking-tight mt-4"
+              class="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 dark:text-white tracking-tight mt-4"
             >
               Building digital experiences with purpose and precision
             </h1>
 
             <p
-              class="mt-6 text-xl text-gray-600 dark:text-gray-300 leading-relaxed"
+              class="mt-4 sm:mt-6 text-lg sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed"
             >
               Full-stack developer specializing in e-commerce solutions,
               crafting high-performance websites with WordPress, Shopify, and
               modern JavaScript frameworks.
             </p>
 
-            <div class="mt-10">
+            <!-- CTA Button -->
+            <div class="mt-8 sm:mt-10">
               <a
                 href="#contact"
-                class="inline-flex items-center px-6 py-3 rounded-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors duration-200"
+                class="inline-flex items-center px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors duration-200"
               >
                 Let's work together
                 <svg
-                  class="ml-2 w-5 h-5"
+                  class="ml-2 w-4 h-4 sm:w-5 sm:h-5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -186,6 +189,184 @@
                   />
                 </svg>
               </a>
+            </div>
+
+            <!-- Technologies with adjusted spacing -->
+            <div class="mt-8 sm:mt-12">
+              <div class="mb-6">
+                <div class="flex items-center gap-3 mb-3 sm:mb-2">
+                  <svg
+                    class="w-5 h-5 text-gray-400 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
+                    />
+                  </svg>
+                  <div class="flex-1">
+                    <h2
+                      class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider"
+                    >
+                      Tech Stack & Expertise
+                    </h2>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                      Technologies and tools I use to bring ideas to life
+                    </p>
+                  </div>
+                  <span
+                    class="hidden sm:block h-px flex-1 bg-gray-200 dark:bg-gray-700"
+                  ></span>
+                </div>
+              </div>
+
+              <!-- Scrollable Container -->
+              <div class="relative -mx-4 sm:mx-0">
+                <!-- Left Shadow -->
+                <div
+                  class="absolute left-0 top-0 bottom-0 w-8 sm:w-12 bg-gradient-to-r from-white dark:from-gray-900 to-transparent z-10 pointer-events-none"
+                ></div>
+
+                <!-- Scrollable Content -->
+                <div
+                  class="flex gap-3 overflow-x-auto scrollbar-hide px-4 pb-2"
+                >
+                  <!-- Frontend Frameworks -->
+                  <div class="tech-group flex-none">
+                    <span class="tech-label">Frontend</span>
+                    <div class="flex gap-1.5">
+                      <div class="tech-card">
+                        <img
+                          src="images/technologies/react.svg"
+                          alt="React"
+                          class="tech-icon"
+                        />
+                        <span>React</span>
+                      </div>
+                      <div class="tech-card">
+                        <img
+                          src="images/technologies/vue.svg"
+                          alt="Vue"
+                          class="tech-icon"
+                        />
+                        <span>Vue</span>
+                      </div>
+                      <div class="tech-card">
+                        <img
+                          src="images/technologies/angular.svg"
+                          alt="Angular"
+                          class="tech-icon"
+                        />
+                        <span>Angular</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Backend Frameworks -->
+                  <div class="tech-group flex-none">
+                    <span class="tech-label">Backend</span>
+                    <div class="flex gap-1.5">
+                      <div class="tech-card">
+                        <img
+                          src="images/technologies/nodejs.svg"
+                          alt="Node.js"
+                          class="tech-icon"
+                        />
+                        <span>Node.js</span>
+                      </div>
+                      <div class="tech-card">
+                        <img
+                          src="images/technologies/nestjs.svg"
+                          alt="Nest.js"
+                          class="tech-icon"
+                        />
+                        <span>Nest.js</span>
+                      </div>
+                      <div class="tech-card">
+                        <img
+                          src="images/technologies/express.svg"
+                          alt="Express"
+                          class="tech-icon"
+                        />
+                        <span>Express.js</span>
+                      </div>
+                      <div class="tech-card">
+                        <img
+                          src="images/technologies/php.svg"
+                          alt="PHP"
+                          class="tech-icon"
+                        />
+                        <span>PHP</span>
+                      </div>
+                      <div class="tech-card">
+                        <img
+                          src="images/technologies/laravel.svg"
+                          alt="Laravel"
+                          class="tech-icon"
+                        />
+                        <span>Laravel</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- E-commerce Platforms -->
+                  <div class="tech-group flex-none">
+                    <span class="tech-label">E-commerce</span>
+                    <div class="flex gap-1.5">
+                      <div class="tech-card">
+                        <img
+                          src="images/technologies/shopify.svg"
+                          alt="Shopify"
+                          class="tech-icon"
+                        />
+                        <span>Shopify</span>
+                      </div>
+                      <div class="tech-card">
+                        <img
+                          src="images/technologies/wordpress.svg"
+                          alt="WordPress"
+                          class="tech-icon"
+                        />
+                        <span>WordPress</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Cross mobile platforms -->
+                  <div class="tech-group flex-none">
+                    <span class="tech-label">Mobile</span>
+                    <div class="flex gap-1.5">
+                      <div class="tech-card">
+                        <img
+                          src="images/technologies/flutter.svg"
+                          alt="Flutter"
+                          class="tech-icon"
+                        />
+                        <span>Flutter</span>
+                      </div>
+                      <div class="tech-card">
+                        <img
+                          src="images/technologies/react.svg"
+                          alt="React Native"
+                          class="tech-icon"
+                        />
+                        <span>React Native</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Other tech groups remain the same -->
+                </div>
+
+                <!-- Right Shadow -->
+                <div
+                  class="absolute right-0 top-0 bottom-0 w-8 sm:w-12 bg-gradient-to-l from-white dark:from-gray-900 to-transparent z-10 pointer-events-none"
+                ></div>
+              </div>
             </div>
           </div>
         </div>

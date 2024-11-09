@@ -1,17 +1,6 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg fill="#000000"  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-	 width="800px" height="800px" viewBox="0 0 540 540" enable-background="new 0 0 540 540" xml:space="preserve">
-
-<g id="c2be471c56fc5b4dd571614bb3051437">
-
-<path d="M270,163.21l44.739,104.795H270v-0.001h-44.74L270,163.21L270,163.21z M504.369,98.337L469.437,412.72L270,525.5
-		L70.563,412.721L35.631,98.336L270,14.5v0.001L504.369,98.337z M419.535,387.77L270,59.414v-0.001L120.465,387.77h55.891
-		l28.943-75.852L270,310.92l64.7,0.998l28.942,75.852H419.535z">
-
-</path>
-
-</g>
-
+<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 2L3 7L5 24L16 30L27 24L29 7L16 2Z" fill="#DD0031"/>
+<path d="M16 2V30L27 24L29 7L16 2Z" fill="#C3002F"/>
+<path d="M15.9998 5.09375L7.87305 23.3638H10.9031L12.5368 19.2757H19.4348L21.0685 23.3638H24.0986L15.9998 5.09375ZM18.3736 16.7557H13.626L15.9998 11.0298L18.3736 16.7557Z" fill="white"/>
 </svg>

@@ -338,33 +338,38 @@
 
   /* Technology Section Styles */
   .tech-group {
-    @apply flex flex-col gap-3 flex-none;
+    @apply flex flex-col gap-1.5 sm:gap-2;
   }
 
   .tech-label {
-    @apply text-sm font-medium text-gray-500 dark:text-gray-400 px-1;
+    @apply text-xs sm:text-sm font-medium text-gray-500 dark:text-gray-400 mb-1.5 sm:mb-2;
   }
 
   .tech-card {
-    @apply flex items-center gap-3 px-4 py-2.5 
-           rounded-xl bg-gray-50 dark:bg-gray-800/50
-           text-gray-700 dark:text-gray-300
-           hover:bg-gray-100 dark:hover:bg-gray-800
-           transition-all duration-200
-           text-[15px] font-medium
+    @apply flex items-center gap-1.5 sm:gap-2 
+           px-2.5 sm:px-4 py-1.5 sm:py-2.5
+           bg-gray-50 dark:bg-gray-800/50
+           rounded-lg sm:rounded-xl 
            border border-gray-100 dark:border-gray-700/50
-           h-10; /* Fixed height */
+           text-gray-700 dark:text-gray-300
+           text-xs sm:text-sm font-medium 
+           whitespace-nowrap
+           hover:bg-gray-100 dark:hover:bg-gray-700/50
+           transition-all duration-200;
   }
 
   .tech-icon {
-    @apply w-5 h-5 object-contain flex-shrink-0;
+    @apply w-4 h-4 sm:w-5 sm:h-5 object-contain;
   }
 
-  .tech-badge {
-    @apply text-xs px-2 py-0.5 rounded-full 
-           bg-gray-200/50 dark:bg-gray-700/50 
-           text-gray-600 dark:text-gray-400
-           ml-1;
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 
   /* Scrollbar hiding with maintained functionality */
