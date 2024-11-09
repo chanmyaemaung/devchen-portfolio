@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chen Portfolio</title>
+    <link rel="stylesheet" href="css/output.css" />
+  </head>
+  <body class="bg-white dark:bg-gray-900">
+    <!-- Navbar -->
+    <nav class="nav-blur">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo -->
+          <a
+            href="#"
+            class="text-xl font-medium text-primary-600 dark:text-primary-400"
+          >
+            Chan Lay
+          </a>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex md:items-center md:space-x-3">
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#blog" class="nav-link">Blog</a>
+            <a href="#contact" class="nav-link">Contact</a>
+
+            <!-- Desktop Language Button -->
+            <button
+              id="langBtn"
+              class="nav-icon-btn"
+              aria-label="Change Language"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </button>
+
+            <!-- Theme Toggle -->
+            <button
+              id="themeToggle"
+              class="nav-icon-btn"
+              aria-label="Toggle Theme"
+            >
+              <svg
+                id="darkIcon"
+                class="hidden w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                />
+              </svg>
+              <svg
+                id="lightIcon"
+                class="hidden w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Mobile Navigation -->
+          <div class="md:hidden flex items-center space-x-2">
+            <!-- Mobile Language Button -->
+            <button
+              id="mobileLangBtn"
+              class="nav-icon-btn"
+              aria-label="Change Language"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </button>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuBtn" class="nav-icon-btn" aria-label="Menu">
+              <div class="hamburger-lines">
+                <span class="hamburger-line top-line"></span>
+                <span class="hamburger-line middle-line"></span>
+                <span class="hamburger-line bottom-line"></span>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu hidden">
+          <div class="px-2 pt-2 pb-3 space-y-1">
+            <a href="#projects" class="mobile-link">Projects</a>
+            <a href="#blog" class="mobile-link">Blog</a>
+            <a href="#services" class="mobile-link">Services</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[calc(100vh-4rem)] flex items-center py-20">
+      <!-- Subtle gradient background -->
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-gray-50/50 to-white dark:from-gray-900/50 dark:to-gray-900 -z-10"
+      ></div>
+
+      <!-- Content Container -->
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto">
+          <!-- Main Content -->
+          <div class="space-y-8 animate-fade-in">
+            <!-- Greeting with Waving Hand -->
+            <p
+              class="text-primary-600 dark:text-primary-400 text-lg font-medium flex items-center gap-2"
+            >
+              Hi, I'm Chan Lay
+              <span class="wave-emoji text-2xl">👋</span>
+            </p>
+
+            <!-- Title -->
+            <h1
+              class="text-4xl sm:text-5xl font-semibold text-gray-900 dark:text-white tracking-tight"
+            >
+              Building digital experiences with purpose and precision
+            </h1>
+
+            <!-- Description -->
+            <p class="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+              Full-stack developer specializing in e-commerce solutions,
+              crafting high-performance websites with WordPress, Shopify, and
+              modern JavaScript frameworks.
+            </p>
+
+            <!-- CTA -->
+            <div class="pt-4">
+              <a
+                href="#contact"
+                class="inline-flex items-center px-6 py-3 rounded-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors duration-200"
+              >
+                Let's work together
+                <svg
+                  class="ml-2 w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            <!-- Technologies -->
+            <div class="pt-12 space-y-4">
+              <h2 class="text-sm font-medium text-gray-500 dark:text-gray-400">
+                Technologies I work with
+              </h2>
+
+              <!-- Scrollable Container with Shadows -->
+              <div class="relative">
+                <!-- Left Shadow -->
+                <div
+                  class="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-white to-transparent dark:from-gray-900 z-10 pointer-events-none"
+                ></div>
+
+                <!-- Right Shadow -->
+                <div
+                  class="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-white to-transparent dark:from-gray-900 z-10 pointer-events-none"
+                ></div>
+
+                <!-- Scrollable Content -->
+                <div
+                  class="flex gap-6 overflow-x-auto scrollbar-hide px-1 pb-4"
+                >
+                  <!-- Frontend Frameworks -->
+                  <div class="tech-group">
+                    <span class="tech-label">Frontend Frameworks</span>
+                    <div class="flex gap-3">
+                      <div class="tech-card">
+                        <img
+                          src="images/technologies/angular.svg"
+                          alt="Angular"
+                          class="tech-icon"
+                        />
+                        <span>Angular</span>
+                      </div>
+                      <div class="tech-card">
+                        <img
+                          src="images/technologies/react.svg"
+                          alt="React"
+                          class="tech-icon"
+                        />
+                        <span>React.js</span>
+                      </div>
+                      <div class="tech-card">
+                        <img
+                          src="images/technologies/vue.svg"
+                          alt="Vue"
+                          class="tech-icon"
+                        />
+                        <span>Vue.js</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Backend Technologies -->
+                  <div class="tech-group">
+                    <span class="tech-label">Backend Technologies</span>
+                    <div class="flex gap-3">
+                      <div class="tech-card">
+                        <img
+                          src="images/technologies/nodejs.svg"
+                          alt="Node.js"
+                          class="tech-icon"
+                        />
+                        <span>Node.js</span>
+                        <span class="tech-badge">Express & Nest.js</span>
+                      </div>
+                      <div class="tech-card">
+                        <img
+                          src="images/technologies/laravel.svg"
+                          alt="Laravel"
+                          class="tech-icon"
+                        />
+                        <span>Laravel</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- E-commerce Solutions -->
+                  <div class="tech-group">
+                    <span class="tech-label">E-commerce Solutions</span>
+                    <div class="flex gap-3">
+                      <div class="tech-card">
+                        <img
+                          src="images/technologies/shopify.svg"
+                          alt="Shopify"
+                          class="tech-icon"
+                        />
+                        <span>Shopify</span>
+                        <span class="tech-badge">Liquid</span>
+                      </div>
+                      <dxiv class="tech-card">
+                        <img
+                          src="images/technologies/wordpress.svg"
+                          alt="WordPress"
+                          class="tech-icon"
+                        />
+                        <span>WordPress</span>
+                      </dxiv>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Language Modal | Navbar -->
+    <div id="langModal" class="fixed inset-0 z-50 hidden">
+      <!-- Backdrop -->
+      <div
+        class="fixed inset-0 bg-black/20 dark:bg-black/40 backdrop-blur-sm"
+      ></div>
+
+      <!-- Modal Container -->
+      <div class="fixed inset-0 overflow-y-auto">
+        <div class="flex min-h-full items-center justify-center p-4">
+          <!-- Modal Content -->
+          <div
+            class="relative w-full max-w-sm rounded-2xl bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl shadow-xl"
+          >
+            <!-- Header -->
+            <div class="px-6 pt-6 pb-4">
+              <div class="flex items-center justify-between">
+                <h3
+                  class="text-lg font-medium text-gray-900 dark:text-gray-100"
+                >
+                  Select Language
+                </h3>
+                <button class="nav-icon-btn modal-close">
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Options -->
+            <div class="px-4 pb-6">
+              <div class="space-y-1">
+                <button class="w-full">
+                  <div
+                    class="flex items-center justify-between px-4 py-3 rounded-xl hover:bg-gray-100/50 dark:hover:bg-gray-700/50 transition-colors duration-200"
+                  >
+                    <span
+                      class="text-[15px] font-medium text-gray-900 dark:text-gray-100"
+                      >English</span
+                    >
+                    <svg
+                      class="w-5 h-5 text-primary-600 dark:text-primary-400"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </button>
+                <button class="w-full">
+                  <div
+                    class="flex items-center px-4 py-3 rounded-xl hover:bg-gray-100/50 dark:hover:bg-gray-700/50 transition-colors duration-200"
+                  >
+                    <span
+                      class="text-[15px] font-medium text-gray-900 dark:text-gray-100"
+                      >Myanmar</span
+                    >
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
