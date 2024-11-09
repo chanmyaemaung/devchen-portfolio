@@ -18,6 +18,11 @@ class App {
     if (yearElement) {
       yearElement.textContent = new Date().getFullYear();
     }
+
+    // Initialize BlogManager if filter buttons exist
+    if (document.querySelector(".filter-btn")) {
+      this.blogManager = new BlogManager();
+    }
   }
 }
 
@@ -293,6 +298,71 @@ class ProjectsManager {
         card.classList.remove("animate-fade-in");
       }
     });
+  }
+}
+
+class BlogManager {
+  constructor() {
+    this.filterBtns = document.querySelectorAll(".filter-btn");
+    this.blogCards = document.querySelectorAll(".blog-card");
+    this.currentFilter = "all";
+    this.isAnimating = false;
+
+    this.init();
+  }
+
+  init() {
+    this.filterBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        if (this.isAnimating) return;
+
+        this.filterBtns.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const filter = btn.dataset.filter;
+        if (filter !== this.currentFilter) {
+          this.handleFilter(filter);
+        }
+      });
+    });
+  }
+
+  handleFilter(filter) {
+    this.currentFilter = filter;
+    this.isAnimating = true;
+
+    this.blogCards.forEach((card) => {
+      const category = card.dataset.category;
+      const shouldShow = filter === "all" || category === filter;
+
+      if (shouldShow) {
+        card.style.opacity = "0";
+        card.classList.remove("hidden");
+        setTimeout(() => {
+          card.style.transition = "opacity 0.3s ease";
+          card.style.opacity = "1";
+        }, 10);
+      } else {
+        card.style.opacity = "0";
+        card.style.transition = "opacity 0.3s ease";
+        card.addEventListener(
+          "transitionend",
+          () => {
+            if (
+              this.currentFilter !== "all" &&
+              category !== this.currentFilter
+            ) {
+              card.classList.add("hidden");
+            }
+          },
+          { once: true }
+        );
+      }
+    });
+
+    setTimeout(() => {
+      this.isAnimating = false;
+    }, 350);
   }
 }
 

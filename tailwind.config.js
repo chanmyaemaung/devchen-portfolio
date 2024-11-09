@@ -18,7 +18,22 @@ module.exports = {
           900: "#581c87",
         },
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: "none",
+            code: {
+              backgroundColor: "transparent",
+              padding: "0",
+            },
+            pre: {
+              backgroundColor: "transparent",
+              padding: "0",
+            },
+          },
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
