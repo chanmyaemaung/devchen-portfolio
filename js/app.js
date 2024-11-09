@@ -8,6 +8,7 @@ class App {
     this.themeManager = new ThemeManager();
     this.mobileMenu = new MobileMenu();
     this.languageModal = new LanguageModal();
+    this.projectsManager = new ProjectsManager();
   }
 }
 
@@ -237,6 +238,50 @@ class LanguageModal {
             firstFocusable?.focus();
           }
         }
+      }
+    });
+  }
+}
+
+class ProjectsManager {
+  constructor() {
+    // DOM Elements
+    this.filterBtns = document.querySelectorAll(".filter-btn");
+    this.projectCards = document.querySelectorAll(".project-card");
+
+    // State
+    this.currentFilter = "all";
+
+    this.init();
+  }
+
+  init() {
+    // Add click event listeners to filter buttons
+    this.filterBtns.forEach((btn) => {
+      btn.addEventListener("click", () =>
+        this.handleFilter(btn.dataset.filter)
+      );
+    });
+  }
+
+  handleFilter(filter) {
+    // Update current filter
+    this.currentFilter = filter;
+
+    // Update active state of filter buttons
+    this.filterBtns.forEach((btn) => {
+      btn.classList.toggle("active", btn.dataset.filter === filter);
+    });
+
+    // Filter projects
+    this.projectCards.forEach((card) => {
+      const category = card.dataset.category;
+      if (this.currentFilter === "all" || category === this.currentFilter) {
+        card.classList.remove("hidden");
+        card.classList.add("animate-fade-in");
+      } else {
+        card.classList.add("hidden");
+        card.classList.remove("animate-fade-in");
       }
     });
   }

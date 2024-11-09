@@ -121,203 +121,75 @@
       </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="relative min-h-[calc(100vh-4rem)] flex items-center py-20">
-      <!-- Subtle gradient background -->
-      <div
-        class="absolute inset-0 bg-gradient-to-b from-gray-50/50 to-white dark:from-gray-900/50 dark:to-gray-900 -z-10"
-      ></div>
-
-      <!-- Content Container -->
+    <!-- Full Projects Page -->
+    <section class="py-20">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl mx-auto">
-          <!-- Main Content -->
-          <div class="space-y-8 animate-fade-in">
-            <!-- Greeting with Waving Hand -->
-            <p
-              class="text-primary-600 dark:text-primary-400 text-lg font-medium flex items-center gap-2"
-            >
-              Hi, I'm Chan Lay
-              <span class="wave-emoji text-2xl">👋</span>
-            </p>
+        <!-- Page Header -->
+        <div class="max-w-3xl mx-auto text-center mb-16">
+          <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            My Projects
+          </h1>
+          <p class="text-xl text-gray-600 dark:text-gray-400">
+            A collection of my work across various technologies and industries
+          </p>
+        </div>
 
-            <!-- Title -->
-            <h1
-              class="text-4xl sm:text-5xl font-semibold text-gray-900 dark:text-white tracking-tight"
-            >
-              Building digital experiences with purpose and precision
-            </h1>
+        <!-- Filter Buttons Container -->
+        <div class="relative mb-12">
+          <!-- Center Container -->
+          <div class="max-w-4xl mx-auto relative">
+            <!-- Left Shadow -->
+            <div
+              class="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-white to-transparent dark:from-gray-900 z-10 pointer-events-none"
+            ></div>
 
-            <!-- Description -->
-            <p class="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-              Full-stack developer specializing in e-commerce solutions,
-              crafting high-performance websites with WordPress, Shopify, and
-              modern JavaScript frameworks.
-            </p>
+            <!-- Right Shadow -->
+            <div
+              class="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-white to-transparent dark:from-gray-900 z-10 pointer-events-none"
+            ></div>
 
-            <!-- CTA -->
-            <div class="pt-4">
-              <a
-                href="#contact"
-                class="inline-flex items-center px-6 py-3 rounded-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors duration-200"
-              >
-                Let's work together
-                <svg
-                  class="ml-2 w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+            <!-- Scrollable Filter Buttons -->
+            <div class="flex overflow-x-auto scrollbar-hide px-4 py-2">
+              <div class="flex gap-3 mx-auto">
+                <button
+                  class="filter-btn active whitespace-nowrap"
+                  data-filter="all"
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </a>
-            </div>
-
-            <!-- Technologies -->
-            <div class="pt-12 space-y-4">
-              <h2 class="text-sm font-medium text-gray-500 dark:text-gray-400">
-                Technologies I work with
-              </h2>
-
-              <!-- Scrollable Container with Shadows -->
-              <div class="relative">
-                <!-- Left Shadow -->
-                <div
-                  class="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-white to-transparent dark:from-gray-900 z-10 pointer-events-none"
-                ></div>
-
-                <!-- Right Shadow -->
-                <div
-                  class="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-white to-transparent dark:from-gray-900 z-10 pointer-events-none"
-                ></div>
-
-                <!-- Scrollable Content -->
-                <div
-                  class="flex gap-6 overflow-x-auto scrollbar-hide px-1 pb-4"
+                  All Projects
+                </button>
+                <button
+                  class="filter-btn whitespace-nowrap"
+                  data-filter="frontend"
                 >
-                  <!-- Frontend Frameworks -->
-                  <div class="tech-group">
-                    <span class="tech-label">Frontend Frameworks</span>
-                    <div class="flex gap-3">
-                      <div class="tech-card">
-                        <img
-                          src="images/technologies/angular.svg"
-                          alt="Angular"
-                          class="tech-icon"
-                        />
-                        <span>Angular</span>
-                      </div>
-                      <div class="tech-card">
-                        <img
-                          src="images/technologies/react.svg"
-                          alt="React"
-                          class="tech-icon"
-                        />
-                        <span>React.js</span>
-                      </div>
-                      <div class="tech-card">
-                        <img
-                          src="images/technologies/vue.svg"
-                          alt="Vue"
-                          class="tech-icon"
-                        />
-                        <span>Vue.js</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Backend Technologies -->
-                  <div class="tech-group">
-                    <span class="tech-label">Backend Technologies</span>
-                    <div class="flex gap-3">
-                      <div class="tech-card">
-                        <img
-                          src="images/technologies/nodejs.svg"
-                          alt="Node.js"
-                          class="tech-icon"
-                        />
-                        <span>Node.js</span>
-                        <span class="tech-badge">Express & Nest.js</span>
-                      </div>
-                      <div class="tech-card">
-                        <img
-                          src="images/technologies/laravel.svg"
-                          alt="Laravel"
-                          class="tech-icon"
-                        />
-                        <span>Laravel</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- E-commerce Solutions -->
-                  <div class="tech-group">
-                    <span class="tech-label">E-commerce Solutions</span>
-                    <div class="flex gap-3">
-                      <div class="tech-card">
-                        <img
-                          src="images/technologies/shopify.svg"
-                          alt="Shopify"
-                          class="tech-icon"
-                        />
-                        <span>Shopify</span>
-                        <span class="tech-badge">Liquid</span>
-                      </div>
-                      <dxiv class="tech-card">
-                        <img
-                          src="images/technologies/wordpress.svg"
-                          alt="WordPress"
-                          class="tech-icon"
-                        />
-                        <span>WordPress</span>
-                      </dxiv>
-                    </div>
-                  </div>
-                </div>
+                  Frontend Development
+                </button>
+                <button
+                  class="filter-btn whitespace-nowrap"
+                  data-filter="backend"
+                >
+                  Backend Development
+                </button>
+                <button
+                  class="filter-btn whitespace-nowrap"
+                  data-filter="ecommerce"
+                >
+                  E-commerce
+                </button>
+                <button
+                  class="filter-btn whitespace-nowrap"
+                  data-filter="wordpress"
+                >
+                  WordPress
+                </button>
+                <button
+                  class="filter-btn whitespace-nowrap"
+                  data-filter="shopify"
+                >
+                  Shopify
+                </button>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Preview Section -->
-    <section class="py-20">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Section Header -->
-        <div class="flex justify-between items-end mb-12">
-          <div>
-            <h2 class="text-3xl font-semibold text-gray-900 dark:text-white">
-              Featured Projects
-            </h2>
-            <p class="mt-2 text-gray-600 dark:text-gray-400 text-lg">
-              Some of my recent work
-            </p>
-          </div>
-          <a
-            href="/projects.html"
-            class="group inline-flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors duration-200"
-          >
-            View all projects
-            <svg
-              class="w-5 h-5 ml-1 transform transition-transform duration-200 group-hover:translate-x-0.5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </a>
         </div>
 
         <!-- Projects Grid -->
@@ -595,6 +467,26 @@
           </article>
 
           <!-- Add more project cards here -->
+        </div>
+
+        <!-- Load More Button -->
+        <div class="mt-12 text-center">
+          <button class="load-more-btn">
+            Load More Projects
+            <svg
+              class="w-5 h-5 ml-2 animate-bounce"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </section>
