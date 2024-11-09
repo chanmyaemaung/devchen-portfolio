@@ -9,6 +9,7 @@ class App {
     this.mobileMenu = new MobileMenu();
     this.languageModal = new LanguageModal();
     this.projectsManager = new ProjectsManager();
+    this.scrollReveal = new ScrollReveal();
   }
 }
 
@@ -283,6 +284,34 @@ class ProjectsManager {
         card.classList.add("hidden");
         card.classList.remove("animate-fade-in");
       }
+    });
+  }
+}
+
+class ScrollReveal {
+  constructor() {
+    this.sections = document.querySelectorAll(".scroll-reveal-section");
+    this.init();
+  }
+
+  init() {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.1,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal");
+          observer.unobserve(entry.target); // Stop observing once revealed
+        }
+      });
+    }, options);
+
+    this.sections.forEach((section) => {
+      observer.observe(section);
     });
   }
 }

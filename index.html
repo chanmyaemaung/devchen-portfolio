@@ -122,41 +122,51 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative min-h-[calc(100vh-4rem)] flex items-center py-20">
-      <!-- Subtle gradient background -->
-      <div
-        class="absolute inset-0 bg-gradient-to-b from-gray-50/50 to-white dark:from-gray-900/50 dark:to-gray-900 -z-10"
-      ></div>
-
-      <!-- Content Container -->
+    <section
+      class="scroll-reveal-section relative min-h-[calc(100vh-4rem)] flex items-center py-20"
+    >
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl mx-auto">
-          <!-- Main Content -->
-          <div class="space-y-8 animate-fade-in">
-            <!-- Greeting with Waving Hand -->
+        <!-- Grid container with mobile-first layout -->
+        <div
+          class="flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-20 items-center"
+        >
+          <!-- Image Container - First on mobile, Second on desktop -->
+          <div class="order-1 lg:order-2 lg:justify-self-end">
+            <div class="hero-blob">
+              <div class="blob-content">
+                <img
+                  src="https://cdn.prod.website-files.com/64c40084d74dba96c7d3beb9/6728d9f30efa15a119b384f6_cmm_half_passport_enhanced-p-800.png"
+                  alt="Profile photo of Chan Lay"
+                  class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Text Content - Second on mobile, First on desktop -->
+          <div class="order-2 lg:order-1 text-center lg:text-left">
             <p
-              class="text-primary-600 dark:text-primary-400 text-lg font-medium flex items-center gap-2"
+              class="text-primary-600 dark:text-primary-400 text-lg font-medium flex items-center gap-2 justify-center lg:justify-start"
             >
               Hi, I'm Chan Lay
               <span class="wave-emoji text-2xl">👋</span>
             </p>
 
-            <!-- Title -->
             <h1
-              class="text-4xl sm:text-5xl font-semibold text-gray-900 dark:text-white tracking-tight"
+              class="text-4xl sm:text-5xl font-semibold text-gray-900 dark:text-white tracking-tight mt-4"
             >
               Building digital experiences with purpose and precision
             </h1>
 
-            <!-- Description -->
-            <p class="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p
+              class="mt-6 text-xl text-gray-600 dark:text-gray-300 leading-relaxed"
+            >
               Full-stack developer specializing in e-commerce solutions,
               crafting high-performance websites with WordPress, Shopify, and
               modern JavaScript frameworks.
             </p>
 
-            <!-- CTA -->
-            <div class="pt-4">
+            <div class="mt-10">
               <a
                 href="#contact"
                 class="inline-flex items-center px-6 py-3 rounded-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors duration-200"
@@ -177,117 +187,13 @@
                 </svg>
               </a>
             </div>
-
-            <!-- Technologies -->
-            <div class="pt-12 space-y-4">
-              <h2 class="text-sm font-medium text-gray-500 dark:text-gray-400">
-                Technologies I work with
-              </h2>
-
-              <!-- Scrollable Container with Shadows -->
-              <div class="relative">
-                <!-- Left Shadow -->
-                <div
-                  class="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-white to-transparent dark:from-gray-900 z-10 pointer-events-none"
-                ></div>
-
-                <!-- Right Shadow -->
-                <div
-                  class="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-white to-transparent dark:from-gray-900 z-10 pointer-events-none"
-                ></div>
-
-                <!-- Scrollable Content -->
-                <div
-                  class="flex gap-6 overflow-x-auto scrollbar-hide px-1 pb-4"
-                >
-                  <!-- Frontend Frameworks -->
-                  <div class="tech-group">
-                    <span class="tech-label">Frontend Frameworks</span>
-                    <div class="flex gap-3">
-                      <div class="tech-card">
-                        <img
-                          src="images/technologies/angular.svg"
-                          alt="Angular"
-                          class="tech-icon"
-                        />
-                        <span>Angular</span>
-                      </div>
-                      <div class="tech-card">
-                        <img
-                          src="images/technologies/react.svg"
-                          alt="React"
-                          class="tech-icon"
-                        />
-                        <span>React.js</span>
-                      </div>
-                      <div class="tech-card">
-                        <img
-                          src="images/technologies/vue.svg"
-                          alt="Vue"
-                          class="tech-icon"
-                        />
-                        <span>Vue.js</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Backend Technologies -->
-                  <div class="tech-group">
-                    <span class="tech-label">Backend Technologies</span>
-                    <div class="flex gap-3">
-                      <div class="tech-card">
-                        <img
-                          src="images/technologies/nodejs.svg"
-                          alt="Node.js"
-                          class="tech-icon"
-                        />
-                        <span>Node.js</span>
-                        <span class="tech-badge">Express & Nest.js</span>
-                      </div>
-                      <div class="tech-card">
-                        <img
-                          src="images/technologies/laravel.svg"
-                          alt="Laravel"
-                          class="tech-icon"
-                        />
-                        <span>Laravel</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- E-commerce Solutions -->
-                  <div class="tech-group">
-                    <span class="tech-label">E-commerce Solutions</span>
-                    <div class="flex gap-3">
-                      <div class="tech-card">
-                        <img
-                          src="images/technologies/shopify.svg"
-                          alt="Shopify"
-                          class="tech-icon"
-                        />
-                        <span>Shopify</span>
-                        <span class="tech-badge">Liquid</span>
-                      </div>
-                      <dxiv class="tech-card">
-                        <img
-                          src="images/technologies/wordpress.svg"
-                          alt="WordPress"
-                          class="tech-icon"
-                        />
-                        <span>WordPress</span>
-                      </dxiv>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Projects Preview Section -->
-    <section class="py-20">
+    <section class="scroll-reveal-section py-20">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Section Header -->
         <div class="flex justify-between items-end mb-12">
@@ -299,13 +205,15 @@
               Some of my recent work
             </p>
           </div>
+
+          <!-- View All Projects Button -->
           <a
             href="/projects.html"
-            class="group inline-flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors duration-200"
+            class="hidden sm:inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full text-[15px] font-medium bg-gray-100 dark:bg-gray-800/50 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700/50 transition-all duration-200 whitespace-nowrap"
           >
             View all projects
             <svg
-              class="w-5 h-5 ml-1 transform transition-transform duration-200 group-hover:translate-x-0.5"
+              class="w-4 h-4"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -321,7 +229,9 @@
         </div>
 
         <!-- Projects Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+        >
           <!-- Project Card -->
           <article class="project-card group">
             <div
@@ -526,75 +436,30 @@
             </div>
           </article>
 
-          <!-- Project Card -->
-          <article class="project-card group" data-category="ecommerce">
-            <div
-              class="relative overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-800/50 aspect-[4/3]"
-            >
-              <!-- Project Image -->
-              <img
-                src="https://ombraz.com/cdn/shop/products/classic_tortoise_brown_visorsOff_front.jpg"
-                alt="Project Name"
-                class="object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
-              />
-              <!-- Overlay -->
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              ></div>
-            </div>
-
-            <!-- Card Content -->
-            <div class="mt-4 space-y-2">
-              <!-- Tags -->
-              <div class="flex gap-2">
-                <span class="project-tag">React</span>
-                <span class="project-tag">Node.js</span>
-              </div>
-
-              <!-- Title -->
-              <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                <a
-                  href="/project/1"
-                  class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
-                >
-                  Project Name
-                </a>
-              </h3>
-
-              <!-- Description -->
-              <p class="text-gray-600 dark:text-gray-400 line-clamp-2">
-                Brief description of the project that highlights the key
-                features and technologies used.
-              </p>
-            </div>
-
-            <!-- Card Footer -->
-            <div class="mt-4 flex items-center justify-between text-sm">
-              <span class="text-gray-500 dark:text-gray-400">2023</span>
-              <button
-                class="project-link-btn"
-                aria-label="View Project Name details"
-              >
-                View Project
-                <svg
-                  class="w-4 h-4 ml-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    d="M14 5l7 7m0 0l-7 7m7-7H3"
-                  />
-                </svg>
-              </button>
-            </div>
-          </article>
-
           <!-- Add more project cards here -->
+        </div>
+
+        <!-- View All Projects - Mobile Only -->
+        <div class="mt-8 sm:hidden px-4 sm:px-0">
+          <a
+            href="/projects.html"
+            class="flex items-center justify-center gap-2 w-full px-5 py-3.5 rounded-full text-[15px] font-medium bg-gray-100 dark:bg-gray-800/50 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700/50 transition-all duration-200 mx-auto"
+          >
+            View all projects
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </a>
         </div>
       </div>
     </section>

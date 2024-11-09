@@ -166,7 +166,108 @@
     @apply cursor-default;
   }
 
-  /* Hero Section Animations */
+  /* Hero Blob Styles */
+  .hero-blob {
+    @apply relative aspect-square;
+    width: 400px; /* Adjust size as needed */
+  }
+
+  .blob-content {
+    @apply w-full h-full overflow-hidden;
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    animation: blob 25s infinite;
+  }
+
+  .blob-content img {
+    @apply w-full h-full object-cover;
+    transform: scale(1.1); /* Prevent edge gaps during animation */
+  }
+
+  @keyframes blob {
+    0%,
+    100% {
+      border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    }
+    33% {
+      border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+    }
+    66% {
+      border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+    }
+  }
+
+  /* Float animation */
+  .hero-blob {
+    animation: float 8s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .hero-blob {
+      @apply w-72 mx-auto; /* Smaller on mobile but centered */
+    }
+  }
+
+  /* Update your hero section container */
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Adjust grid gap */
+  .hero-section > .container > div {
+    @apply flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-4 items-center;
+  }
+
+  /* Optional: Add this if you want the image closer to the text */
+  @screen lg {
+    .hero-blob {
+      margin-right: -2rem; /* Pull image closer to text */
+    }
+  }
+
+  /* Disable animations if user prefers reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .hero-blob {
+      animation: none;
+    }
+    .hero-blob clipPath path {
+      animation: none;
+    }
+  }
+
+  /* High contrast mode support */
+  @media (forced-colors: active) {
+    .hero-blob img {
+      @apply grayscale-0;
+      border: 2px solid CanvasText;
+    }
+  }
+
+  /* Optional: Add floating animation */
+  .hero-blob-container {
+    animation: float 8s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
   .animate-fade-in {
     animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1);
   }
@@ -228,23 +329,6 @@
            hover:bg-gray-200 dark:hover:bg-gray-800
            transition-colors duration-200
            text-[15px] font-medium;
-  }
-
-  /* Refined Hero Animation */
-  .animate-fade-in {
-    animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1);
-    animation-fill-mode: both;
-  }
-
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
   }
 
   /* Smooth Scroll Behavior */
@@ -472,5 +556,16 @@
 
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
+  }
+
+  /* Section Reveal Animation */
+  .scroll-reveal-section {
+    @apply opacity-0 translate-y-8;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+      opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .scroll-reveal-section.reveal {
+    @apply opacity-100 translate-y-0;
   }
 }
