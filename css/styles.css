@@ -12,6 +12,7 @@
 }
 
 @layer components {
+
   /*
     * Base styles and common utilities
     * --------------------------------
@@ -40,16 +41,11 @@
 
   /* Navigation Links & Buttons */
   .nav-link {
-    @apply px-3 py-2 text-[15px] font-medium 
-               text-gray-600 dark:text-gray-300 
-               hover:text-primary-600 dark:hover:text-primary-400 
-               transition-colors duration-200;
+    @apply px-3 py-2 text-[15px] font-medium text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200;
   }
 
   .nav-icon-btn {
-    @apply p-2 rounded-md text-gray-600 dark:text-gray-300 
-               hover:bg-gray-100/50 dark:hover:bg-gray-800/50 
-               transition-colors duration-200;
+    @apply p-2 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-100/50 dark:hover:bg-gray-800/50 transition-colors duration-200;
   }
 
   /*
@@ -70,9 +66,11 @@
   .top-line {
     transform: translateY(-6px);
   }
+
   .middle-line {
     transform: translateY(0);
   }
+
   .bottom-line {
     transform: translateY(6px);
   }
@@ -92,13 +90,9 @@
 
   /* Mobile Menu Styles */
   .mobile-menu {
-    @apply fixed left-0 right-0 
-           bg-white/80 dark:bg-gray-900/80
-           backdrop-blur-xl
-           border-t border-gray-200/20 dark:border-gray-700/20
-           transform transition-all duration-300 ease-in-out
-           z-40;
-    top: 4rem; /* Height of your navbar */
+    @apply fixed left-0 right-0 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-t border-gray-200/20 dark:border-gray-700/20 transform transition-all duration-300 ease-in-out z-40;
+    top: 4rem;
+    /* Height of your navbar */
   }
 
   .mobile-menu.active {
@@ -111,15 +105,13 @@
 
   /* Mobile Link Styles */
   .mobile-link {
-    @apply block px-3 py-2 rounded-xl text-[15px] font-medium 
-           text-gray-600 dark:text-gray-300 
-           hover:bg-gray-100/50 dark:hover:bg-gray-800/50 
-           transition-colors duration-200;
+    @apply block px-3 py-2 rounded-xl text-[15px] font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100/50 dark:hover:bg-gray-800/50 transition-colors duration-200;
   }
 
   /* Ensure navbar stays on top */
   .nav-blur {
-    @apply z-50; /* Higher than mobile menu */
+    @apply z-50;
+    /* Higher than mobile menu */
   }
 
   /*
@@ -169,7 +161,8 @@
   /* Hero Blob Styles */
   .hero-blob {
     @apply relative aspect-square;
-    width: 400px; /* Adjust size as needed */
+    width: 400px;
+    /* Adjust size as needed */
   }
 
   .blob-content {
@@ -180,17 +173,21 @@
 
   .blob-content img {
     @apply w-full h-full object-cover;
-    transform: scale(1.1); /* Prevent edge gaps during animation */
+    transform: scale(1.1);
+    /* Prevent edge gaps during animation */
   }
 
   @keyframes blob {
+
     0%,
     100% {
       border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
     }
+
     33% {
       border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
     }
+
     66% {
       border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
     }
@@ -202,10 +199,12 @@
   }
 
   @keyframes float {
+
     0%,
     100% {
       transform: translateY(0);
     }
+
     50% {
       transform: translateY(-10px);
     }
@@ -214,7 +213,8 @@
   /* Responsive adjustments */
   @media (max-width: 1024px) {
     .hero-blob {
-      @apply w-72 mx-auto; /* Smaller on mobile but centered */
+      @apply w-72 mx-auto;
+      /* Smaller on mobile but centered */
     }
   }
 
@@ -224,14 +224,15 @@
   }
 
   /* Adjust grid gap */
-  .hero-section > .container > div {
+  .hero-section>.container>div {
     @apply flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-4 items-center;
   }
 
   /* Optional: Add this if you want the image closer to the text */
   @screen lg {
     .hero-blob {
-      margin-right: -2rem; /* Pull image closer to text */
+      margin-right: -2rem;
+      /* Pull image closer to text */
     }
   }
 
@@ -240,6 +241,7 @@
     .hero-blob {
       animation: none;
     }
+
     .hero-blob clipPath path {
       animation: none;
     }
@@ -259,10 +261,12 @@
   }
 
   @keyframes float {
+
     0%,
     100% {
       transform: translateY(0);
     }
+
     50% {
       transform: translateY(-10px);
     }
@@ -277,6 +281,7 @@
       opacity: 0;
       transform: translateY(10px);
     }
+
     100% {
       opacity: 1;
       transform: translateY(0);
@@ -294,24 +299,31 @@
     0% {
       transform: rotate(0deg);
     }
+
     10% {
       transform: rotate(14deg);
     }
+
     20% {
       transform: rotate(-8deg);
     }
+
     30% {
       transform: rotate(14deg);
     }
+
     40% {
       transform: rotate(-4deg);
     }
+
     50% {
       transform: rotate(10deg);
     }
+
     60% {
       transform: rotate(0deg);
     }
+
     100% {
       transform: rotate(0deg);
     }
@@ -323,12 +335,7 @@
 
   /* Technology Cards */
   .tech-card {
-    @apply flex items-center gap-2 px-4 py-2 rounded-full
-           bg-gray-100 dark:bg-gray-800/50
-           text-gray-700 dark:text-gray-300
-           hover:bg-gray-200 dark:hover:bg-gray-800
-           transition-colors duration-200
-           text-[15px] font-medium;
+    @apply flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800/50 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors duration-200 text-[15px] font-medium;
   }
 
   /* Smooth Scroll Behavior */
@@ -346,16 +353,7 @@
   }
 
   .tech-card {
-    @apply flex items-center gap-1.5 sm:gap-2 
-           px-2.5 sm:px-4 py-1.5 sm:py-2.5
-           bg-gray-50 dark:bg-gray-800/50
-           rounded-lg sm:rounded-xl 
-           border border-gray-100 dark:border-gray-700/50
-           text-gray-700 dark:text-gray-300
-           text-xs sm:text-sm font-medium 
-           whitespace-nowrap
-           hover:bg-gray-100 dark:hover:bg-gray-700/50
-           transition-all duration-200;
+    @apply flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-1.5 sm:py-2.5 bg-gray-50 dark:bg-gray-800/50 rounded-lg sm:rounded-xl border border-gray-100 dark:border-gray-700/50 text-gray-700 dark:text-gray-300 text-xs sm:text-sm font-medium whitespace-nowrap hover:bg-gray-100 dark:hover:bg-gray-700/50 transition-all duration-200;
   }
 
   .tech-icon {
@@ -399,28 +397,17 @@
 
   /* Project Card Styles */
   .project-card {
-    @apply relative p-4 rounded-3xl
-           bg-white dark:bg-gray-900
-           border border-gray-200/50 dark:border-gray-700/50
-           hover:border-gray-300 dark:hover:border-gray-600
-           transition-all duration-300
-           hover:shadow-lg hover:shadow-gray-100/50 dark:hover:shadow-gray-900/50;
+    @apply relative p-4 rounded-3xl bg-white dark:bg-gray-900 border border-gray-200/50 dark:border-gray-700/50 hover:border-gray-300 dark:hover:border-gray-600 transition-all duration-300 hover:shadow-lg hover:shadow-gray-100/50 dark:hover:shadow-gray-900/50;
   }
 
   /* Project Tags */
   .project-tag {
-    @apply px-3 py-1 rounded-full text-sm font-medium
-           bg-gray-100 dark:bg-gray-800
-           text-gray-600 dark:text-gray-400
-           transition-colors duration-200;
+    @apply px-3 py-1 rounded-full text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 transition-colors duration-200;
   }
 
   /* Project Link Button */
   .project-link-btn {
-    @apply inline-flex items-center font-medium
-           text-primary-600 dark:text-primary-400
-           hover:text-primary-700 dark:hover:text-primary-300
-           transition-colors duration-200;
+    @apply inline-flex items-center font-medium text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors duration-200;
   }
 
   /* Image Loading Animation */
@@ -430,29 +417,16 @@
 
   /* Filter Buttons */
   .filter-btn {
-    @apply px-4 py-2 rounded-full text-sm font-medium
-           bg-gray-100 dark:bg-gray-800
-           text-gray-600 dark:text-gray-400
-           hover:bg-gray-200 dark:hover:bg-gray-700
-           transition-all duration-200;
+    @apply px-4 py-2 rounded-full text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200;
   }
 
   .filter-btn.active {
-    @apply bg-primary-600 text-white
-           dark:bg-primary-500 dark:text-white
-           hover:bg-primary-700 dark:hover:bg-primary-600;
+    @apply bg-primary-600 text-white dark:bg-primary-500 dark:text-white hover:bg-primary-700 dark:hover:bg-primary-600;
   }
 
   /* Load More Button */
   .load-more-btn {
-    @apply inline-flex items-center px-6 py-3 
-           rounded-full text-base font-medium
-           bg-gray-900 dark:bg-white
-           text-white dark:text-gray-900
-           hover:bg-gray-800 dark:hover:bg-gray-100
-           transition-all duration-200
-           focus:outline-none focus:ring-2 
-           focus:ring-offset-2 focus:ring-primary-500;
+    @apply inline-flex items-center px-6 py-3 rounded-full text-base font-medium bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500;
   }
 
   /* Project Card Animation */
@@ -491,17 +465,14 @@
 
   /* Project Card Overlay */
   .project-card-overlay {
-    @apply absolute inset-0 
-           bg-gradient-to-t from-black/60 to-transparent 
-           opacity-0 transition-opacity duration-300;
+    @apply absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-300;
   }
 
   /* Accessibility Focus Styles */
   .project-card a:focus,
   .filter-btn:focus,
   .load-more-btn:focus {
-    @apply outline-none ring-2 ring-primary-500 ring-offset-2 
-           dark:ring-offset-gray-900;
+    @apply outline-none ring-2 ring-primary-500 ring-offset-2 dark:ring-offset-gray-900;
   }
 
   /* Loading State */
@@ -520,8 +491,7 @@
 
   /* Grid Layout Improvements */
   .projects-grid {
-    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 
-           gap-6 md:gap-8;
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8;
   }
 
   /* Responsive Adjustments */
@@ -539,18 +509,11 @@
 
   /* Filter Button Styles */
   .filter-btn {
-    @apply px-4 py-2 rounded-full text-[15px] font-medium
-             bg-gray-100 dark:bg-gray-800/50
-             text-gray-600 dark:text-gray-300
-             hover:bg-gray-200 dark:hover:bg-gray-700/50
-             transition-all duration-200
-             flex-none;
+    @apply px-4 py-2 rounded-full text-[15px] font-medium bg-gray-100 dark:bg-gray-800/50 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700/50 transition-all duration-200 flex-none;
   }
 
   .filter-btn.active {
-    @apply bg-gray-900 dark:bg-white
-             text-white dark:text-gray-900
-             hover:bg-gray-800 dark:hover:bg-gray-100;
+    @apply bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100;
   }
 
   /* Hide scrollbar but keep functionality */
@@ -576,39 +539,28 @@
 
   /* Footer Styles */
   .footer-section {
-    @apply relative border-t border-gray-200/50 dark:border-gray-800/50 
-         bg-white dark:bg-gray-900;
+    @apply relative border-t border-gray-200/50 dark:border-gray-800/50 bg-white dark:bg-gray-900;
   }
 
   .footer-heading {
-    @apply text-sm font-semibold text-gray-900 dark:text-white 
-         uppercase tracking-wider;
+    @apply text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider;
   }
 
   .footer-link {
-    @apply inline-block text-[15px] text-gray-600 dark:text-gray-400
-         hover:text-primary-600 dark:hover:text-primary-400
-         transition-colors duration-200;
+    @apply inline-block text-[15px] text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200;
   }
 
   .footer-social-link {
-    @apply p-2 rounded-full
-         text-gray-600 dark:text-gray-400
-         hover:bg-gray-100/50 dark:hover:bg-gray-800/50
-         hover:text-primary-600 dark:hover:text-primary-400
-         transition-colors duration-200;
+    @apply p-2 rounded-full text-gray-600 dark:text-gray-400 hover:bg-gray-100/50 dark:hover:bg-gray-800/50 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200;
   }
 
   .footer-legal-link {
-    @apply text-[15px] text-gray-500 dark:text-gray-400
-         hover:text-gray-900 dark:hover:text-white
-         transition-colors duration-200;
+    @apply text-[15px] text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200;
   }
 
   /* Author Image Grayscale Effect */
   .author-image {
-    @apply w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover
-    grayscale hover:grayscale-0 transition-all duration-500;
+    @apply w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover grayscale hover:grayscale-0 transition-all duration-500;
   }
 
   /* Rich Text Content Wrapper */
@@ -650,8 +602,7 @@
 
   /* Code blocks */
   .rich-text-content pre {
-    @apply my-8 rounded-xl overflow-hidden bg-gray-900 dark:bg-gray-800/50 
-           border border-gray-200/20 dark:border-gray-700/20;
+    @apply my-8 rounded-xl overflow-hidden bg-gray-900 dark:bg-gray-800/50 border border-gray-200/20 dark:border-gray-700/20;
   }
 
   .rich-text-content pre code {
@@ -659,9 +610,8 @@
   }
 
   /* Inline code */
-  .rich-text-content :not(pre) > code {
-    @apply px-1.5 py-0.5 rounded-md bg-gray-100 dark:bg-gray-800 
-           text-gray-900 dark:text-gray-300 text-sm;
+  .rich-text-content :not(pre)>code {
+    @apply px-1.5 py-0.5 rounded-md bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-300 text-sm;
   }
 
   /* Links */
@@ -675,23 +625,31 @@
   }
 
   .filter-btn {
-    @apply px-4 py-2 rounded-full text-sm font-medium
-           bg-gray-100 dark:bg-gray-800
-           text-gray-600 dark:text-gray-400
-           hover:bg-gray-200 dark:hover:bg-gray-700
-           transition-all duration-200;
+    @apply px-4 py-2 rounded-full text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200;
   }
 
   .filter-btn.active {
-    @apply bg-primary-600 text-white
-           hover:bg-primary-700 dark:hover:bg-primary-500;
+    @apply bg-primary-600 text-white hover:bg-primary-700 dark:hover:bg-primary-500;
   }
 
   .filter-btn-count {
-    @apply inline-flex items-center justify-center
-           min-w-[1.5rem] h-6 px-1.5
-           text-xs font-medium
-           bg-white/10 dark:bg-black/20
-           rounded-full;
+    @apply inline-flex items-center justify-center min-w-[1.5rem] h-6 px-1.5 text-xs font-medium bg-white/10 dark:bg-black/20 rounded-full;
+  }
+
+  /* Experience Timeline Styles */
+  .experience-item {
+    @apply relative;
+  }
+
+  .experience-item:hover {
+    .experience-content {
+      @apply transform -translate-y-1 transition-transform duration-200;
+    }
+  }
+
+  /* Glassmorphism effect for cards */
+  .backdrop-blur-xl {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
   }
 }
